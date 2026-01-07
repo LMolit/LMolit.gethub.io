@@ -758,3 +758,119 @@ h6 {
         margin-top: 0.5rem;
         margin-bottom: 0;
 }
+
+/* Contact section spacing */
+.form-section {
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Title + description */
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-description {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  color: #555;
+}
+
+/* Form container */
+.form-container {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Grid layout for form */
+#contactForm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Full-width elements */
+#contactForm .form-group:nth-last-child(2),
+#contactForm button,
+#contactForm .success-message {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+/* Inputs & textarea */
+.form-control {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Textarea */
+textarea.form-control {
+  resize: vertical;
+}
+
+/* Button */
+.btn-primary {
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1e4ed8;
+}
+
+/* Error & success messages */
+.error-message {
+  font-size: 0.85rem;
+  color: #dc2626;
+  margin-top: 0.25rem;
+}
+
+.success-message {
+  color: #16a34a;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  #contactForm {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+  }
+}
+
