@@ -820,10 +820,6 @@ textarea.form-control {
   resize: vertical;
 }
 
-.btn-primary:hover {
-  background-color: #1e4ed8;
-}
-
 /* Error & success messages */
 .error-message {
   font-size: 0.85rem;
