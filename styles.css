@@ -765,11 +765,6 @@ h6 {
   background-color: #f9fafb;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 /* Form container */
 .form-container {
   background: #ffffff;
