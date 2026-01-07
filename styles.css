@@ -770,20 +770,6 @@ h6 {
   margin: 0 auto;
 }
 
-/* Title + description */
-.section-title {
-  text-align: center;
-  font-size: 2.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-description {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 2.5rem;
-  color: #555;
-}
-
 /* Form container */
 .form-container {
   background: #ffffff;
@@ -832,18 +818,6 @@ h6 {
 /* Textarea */
 textarea.form-control {
   resize: vertical;
-}
-
-/* Button */
-.btn-primary {
-  padding: 0.9rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: none;
-  background-color: #2563eb;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 .btn-primary:hover {
