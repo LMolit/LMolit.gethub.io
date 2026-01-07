@@ -83,53 +83,43 @@
       </div>
     </nav>
       
-      <section id="contact" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">Contact Us</h2>
-    <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-      Have questions or ready to get started? Contact us today for a free estimate on any of our services.
+      <!-- Contact Us Section -->
+<section id="contact" class="form-section">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-description">
+      Have a question or want to get in touch? Fill out the form below and we'll respond as soon as possible.
     </p>
     
-    <div className="max-w-3xl mx-auto">
-      <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-          <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" />
+    <div class="form-container">
+      <form id="contactForm">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="contact-name" class="form-label">Full Name *</label>
+          <input type="text" id="contact-name" name="name" class="form-control" required>
+          <div class="error-message" id="contact-name-error"></div>
         </div>
         
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-          <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" />
+        <div class="form-group">
+          <label for="contact-email" class="form-label">Email Address *</label>
+          <input type="email" id="contact-email" name="email" class="form-control" required>
+          <div class="error-message" id="contact-email-error"></div>
         </div>
         
-        <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-          <input type="tel" id="phone" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" />
+        <div class="form-group">
+          <label for="contact-phone" class="form-label">Phone Number (Optional)</label>
+          <input type="tel" id="contact-phone" name="phone" class="form-control">
+          <div class="error-message" id="contact-phone-error"></div>
         </div>
         
-        <div>
-          <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
-          <select id="service" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
-            <option>Select a Service</option>
-            <option>Lawn Mowing</option>
-            <option>Fertilization</option>
-            <option>Tree & Shrub Care</option>
-            <option>Seasonal Clean-ups</option>
-            <option>Mulch Installation</option>
-            <option>Snow Removal</option>
-          </select>
+        <div class="form-group">
+          <label for="contact-message" class="form-label">Message *</label>
+          <textarea id="contact-message" name="message" class="form-control" rows="5" required placeholder="Tell us how we can help you"></textarea>
+          <div class="error-message" id="contact-message-error"></div>
         </div>
         
-        <div className="md:col-span-2">
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-          <textarea id="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"></textarea>
-        </div>
-        
-        <div className="md:col-span-2 text-center">
-          <button type="submit" className="px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors">
-            Submit Request
-          </button>
-        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Send Message</button>
+        <div class="success-message" id="contact-success" style="display: none;"></div>
       </form>
     </div>
   </div>
