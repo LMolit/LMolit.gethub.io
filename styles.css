@@ -758,3 +758,36 @@ h6 {
         margin-top: 0.5rem;
         margin-bottom: 0;
 }
+
+/* Main Input Field Styling */
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+/* Focus State (when user clicks in the field) */
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(86, 151, 86, 0.1);
+}
+
+/* Error State (when validation fails) */
+.form-control.error {
+  border-color: #dc2626;
+}
+
+/* Placeholder Text Styling */
+.form-control::placeholder {
+  color: #9ca3af;
+}
+
+/* Textarea Specific Styling */
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
